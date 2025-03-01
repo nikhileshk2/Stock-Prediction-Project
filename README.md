@@ -7,6 +7,7 @@ Technical Indicators: Includes Moving Averages, RSI, MACD, Bollinger Bands, ATR,
 Macroeconomic Data: Quarterly data (e.g., GDP Growth, Inflation) from a CSV file (commented out in this version).
 Model: Hybrid LSTM built with Keras, trained to predict closing prices.
 Evaluation: R² score and Mean Absolute Error (MAE) for model performance.
+
 Steps
 Data Retrieval: Downloads AAPL stock data using yfinance.
 Feature Engineering:
@@ -23,14 +24,17 @@ Trains the model for 50 epochs with a batch size of 32.
 Evaluation & Visualization:
 Computes test loss, MAE, and R² score.
 Plots actual vs. predicted closing prices using matplotlib.
+
 Requirements
 Python 3.x
 Libraries: yfinance, pandas, numpy, talib, sklearn, tensorflow, matplotlib
+
 Files
 technicalIndicators.py: Custom function to calculate technical indicators.
 HybridLSTMmodel.py / LSTMModel.py: Defines the Hybrid LSTM model architecture.
 AAPL Data (2).csv: External dataset with additional AAPL features.
 (Commented) macrodata.csv: Quarterly macroeconomic data (not used in this run).
+
 Usage
 Install dependencies: pip install -r requirements.txt.
 Run the script: python stock_prediction.py.
@@ -38,6 +42,7 @@ Output:
 Prints data samples, model summary, and performance metrics.
 Saves integrated data to nifty_macro_technical_integrated_2015_2025.csv.
 Displays a plot of actual vs. predicted prices.
+
 Notes
 The macroeconomic data integration is currently commented out but can be enabled by uncommenting Steps 3-6.
 Adjust start_date, end_date, or seq_length as needed for different timeframes or prediction horizons.
