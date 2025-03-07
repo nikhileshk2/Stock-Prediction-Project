@@ -5,47 +5,47 @@ This project uses a Hybrid LSTM (Long Short-Term Memory) model to predict the da
 
 ## Overview
 
-*Data Source*
-Daily AAPL stock data from Yahoo Finance (March 2, 2022 - January 1, 2025)
+**Data Source**
+> Daily AAPL stock data from Yahoo Finance (March 2, 2022 - January 1, 2025)
 
-*Technical Indicators*
-Includes Moving Averages, RSI, MACD, Bollinger Bands, ATR, etc., calculated using talib
+**Technical Indicators**
+> Includes Moving Averages, RSI, MACD, Bollinger Bands, ATR, etc., calculated using talib
 
-*Macroeconomic Data*
-Quarterly data (e.g., GDP Growth, Inflation) from a CSV file (commented out in this version)
+**Macroeconomic Data**
+> Quarterly data (e.g., GDP Growth, Inflation) from a CSV file (commented out in this version)
 
-*Model*
-Hybrid LSTM built with Keras, trained to predict closing prices
+**Model**
+> Hybrid LSTM built with Keras, trained to predict closing prices
 
-*Evaluation*
-R² score and Mean Absolute Error (MAE) for model performance
+**Evaluation**
+> R² score and Mean Absolute Error (MAE) for model performance
 
 
 ## Steps
 
-*Data Retrieval*
+**Data Retrieval**
 > Downloads AAPL stock data using finance
 
-*Feature Engineering*
+**Feature Engineering**
 > Computes technical indicators with a custom calculate_technical_indicators function
 > 
 > Calculates daily returns and target variable (next day's returns)
 > 
 > Combines with external AAPL data from a CSV file
 
-*Data Preprocessing*
+**Data Preprocessing**
 > Scales features and target using MinMaxScaler
 > 
 > Creates 20-day sequences for LSTM input
 > 
 > Splits data into 80% training and 20% testing sets
 
-*Model Training*
+**Model Training**
 > Builds a Hybrid LSTM model with 2 layers and 50 units per layer
 > 
 > Trains the model for 50 epochs with a batch size of 32
 
-*Evaluation & Visualization*
+**Evaluation & Visualization**
 > Computes test loss, MAE, and R² score
 > 
 > Plots actual vs. predicted closing prices using matplotlib
