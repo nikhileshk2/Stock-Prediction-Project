@@ -28,20 +28,26 @@ R² score and Mean Absolute Error (MAE) for model performance
 
 *Feature Engineering*
 > Computes technical indicators with a custom calculate_technical_indicators function
+> 
 > Calculates daily returns and target variable (next day's returns)
+> 
 > Combines with external AAPL data from a CSV file
 
 *Data Preprocessing*
 > Scales features and target using MinMaxScaler
+> 
 > Creates 20-day sequences for LSTM input
+> 
 > Splits data into 80% training and 20% testing sets
 
 *Model Training*
 > Builds a Hybrid LSTM model with 2 layers and 50 units per layer
+> 
 > Trains the model for 50 epochs with a batch size of 32
 
 *Evaluation & Visualization*
 > Computes test loss, MAE, and R² score
+> 
 > Plots actual vs. predicted closing prices using matplotlib
 
 
